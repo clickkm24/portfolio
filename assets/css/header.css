@@ -1,0 +1,205 @@
+
+/* header */
+header{
+  position: fixed;
+  top: 0;left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  transition: background-color 0.4s;
+  z-index: 1000;
+}
+header.scroll{
+  background-color: rgba(255,255,255,0.7);
+}
+.header-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.header-wrap h1{
+  position: relative;
+  font-size: 45px;
+  letter-spacing: -0.05em;
+  transition: color 0.5s;
+  z-index: 2;
+}
+.header-wrap h1.act{
+  color: #fff;
+}
+
+.header-wrap nav.pcver .gnb{
+  display: flex;
+  align-items: center;
+}
+
+.header-wrap nav.pcver .gnb li{
+  font-size: 20px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+.header-wrap nav.pcver .gnb li:nth-of-type(1){
+  margin-left: 0;
+}
+.header-wrap nav.pcver .gnb li.on{
+  position: relative;
+  font-weight: 700;
+}
+.header-wrap nav.pcver .gnb li.on::before{
+  display: block;
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: #343434;
+  transform: rotate(45deg) translateY(-50%);
+  transition: opacity 0.4s;
+  content: '';
+}
+
+  
+.header-wrap .btn-mnu{
+  display: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  z-index: 120;
+}
+.header-wrap .btn-mnu .line{
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  -webkit-transition: background-color 0.3s, opacity 0.3s, margin-top 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, opacity 0.3s, margin-top 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, opacity 0.3s, margin-top 0.3s, transform 0.3s;
+  transition: background-color 0.3s, opacity 0.3s, margin-top 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition-delay: 0s, 0.3s, 0.3s, 0.3s, 0s;
+  transition-delay: 0s, 0.3s, 0.3s, 0.3s, 0s;
+}
+.header-wrap .btn-mnu .line1{
+  margin-top: -8px;
+}
+.header-wrap .btn-mnu .line3{
+  margin-top: 8px;
+}
+.header-wrap .btn-mnu.active .line{
+  width: 120%;
+  margin-top: 0;
+  -webkit-transition-delay: 0s, 0s, 0s, 0s, 0.3s;
+  transition-delay: 0s, 0s, 0s, 0s, 0.3s;
+}
+.header-wrap .btn-mnu.act-color .line{
+  background-color: #fff;
+}
+.header-wrap .btn-mnu.active .line1{
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.header-wrap .btn-mnu.active .line2{
+  opacity: 0;
+}
+.header-wrap .btn-mnu.active .line3{
+  -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+}
+
+.header-wrap nav.mover{
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-100%);
+  background-color: rgb(224, 178, 178);
+  padding: 60px 0;
+  transition: transform 0.8s;
+  z-index: 1;
+}
+.header-wrap nav.mover.act{
+  transform: translateY(0);
+}
+.header-wrap nav.mover ul{
+  padding-top: 50px;
+}
+.header-wrap nav.mover ul li{
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 0;
+  color: #fff;
+  transform: translateX(-5%);
+  opacity: 0;
+  transition: transform 0.8s, opacity 0.6s;
+  cursor: pointer;
+}
+
+.header-wrap nav.mover ul li:nth-of-type(1){transition-delay: 0.6s;}
+.header-wrap nav.mover ul li:nth-of-type(2){transition-delay: 0.7s;}
+.header-wrap nav.mover ul li:nth-of-type(3){transition-delay: 0.8s;}
+.header-wrap nav.mover ul li:nth-of-type(4){transition-delay: 0.9s;}
+.header-wrap nav.mover ul.act li{
+  transform: translateY(0);
+  opacity: 1;
+}
+.navdummy{
+  display: none;
+  position: fixed;
+  top: 0;left: 0;bottom: 0;right: 0;
+  background-color: rgba(50,50,50,0.7);
+  z-index: 1;
+}
+
+
+@media screen and (min-width:600.1px) {
+
+  .header-wrap nav.mover{
+    display: none !important;
+  }
+}
+
+  
+@media screen and (max-width:850px) {
+  .header-wrap{
+    height: 85px;
+  }
+  .header-wrap h1{
+    font-size: 38px;
+  }
+  .header-wrap nav.pcver .gnb li{
+    font-size: 18px;
+    margin-left: 30px;
+  }
+}
+
+
+@media screen and (max-width:600px) {
+  .header-wrap{
+    height: 70px;
+  }
+  .header-wrap h1{
+    font-size: 32px;
+  }
+  .header-wrap nav.pcver{display: none;}
+
+  .header-wrap .btn-mnu{
+    display: block;
+  }
+}
+
+
+@media screen and (max-width:450px) {
+  .header-wrap h1{
+    font-size: 28px;
+  }
+  .header-wrap nav.mover{
+    padding: 30px 0;
+  }
+  .header-wrap nav.mover ul li{
+    font-size: 22px;
+  }
+}
+  

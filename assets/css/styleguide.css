@@ -1,0 +1,484 @@
+
+/* --------------------
+
+z-index 현황
+
+
+
+
+-------------------- */
+
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+body{
+    font-size: 16px;
+    color: #343434;
+    font-weight: 400;
+}
+.center{
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.center1200{
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.center1000{
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+::placeholder{color: #999;}
+select{color: #5d5d5d;}
+
+
+
+/* ---------------커스텀 클래스--------------- */
+/* ------------------------------------------------------------
+.ctm :  small, em, i, b, strong, u 등 에디터 사용시 글자 관련
+        스타일 미적용 방지를 위하여 따로 작성함.
+        html, php에 위 태그들을 style 초기화해서 사용 할 경우 ctm 속성 추가해서 사용.
+
+        ※꼭! 에디터로 작성된 내용이 안들어가는 객체에만 사용하세요.
+        (ex. view 페이지 내용 출력 부분에는 사용 X)
+------------------------------------------------------------ */
+.ctm{
+    font-weight: inherit;
+    font-family: inherit;
+    color: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    font-size: inherit;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.hidden{
+    position: fixed;
+    left: -100000px;
+}
+.clear{clear: both;}
+.pe-none{pointer-events: none;}
+.tal{text-align: left;}
+.tar{text-align: right;}
+.tac{text-align: center;}
+.test-section{height: 2000px; background-color: yellowgreen;}
+.drag-none{-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
+@media screen and (max-width:600px){
+    .mobile-none{display: none;}
+}
+
+.frame img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* ---------------커스텀 클래스 end--------------- */
+
+
+
+/* ---------------폰트 관련--------------- */
+@font-face{
+    font-family: 'Noto Sans KR';
+    src:url(/assets/fonts/NotoSansKR/NotoSansKR-Light.woff) format('woff');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face{
+    font-family: 'Noto Sans KR';
+    src:url(/assets/fonts/NotoSansKR/NotoSansKR-Regular.woff) format('woff');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face{
+    font-family: 'Noto Sans KR';
+    src:url(/assets/fonts/NotoSansKR/NotoSansKR-Medium.woff) format('woff');
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face{
+    font-family: 'Noto Sans KR';
+    src:url(/assets/fonts/NotoSansKR/NotoSansKR-Bold.woff) format('woff');
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face{
+    font-family: 'Noto Sans KR';
+    src:url(/assets/fonts/NotoSansKR/NotoSansKR-Black.woff) format('woff');
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src: url(/assets/fonts/Montserrat/Montserrat-Light.ttf) format('truetype');
+}
+@font-face{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/fonts/Montserrat/Montserrat-Regular.ttf) format('truetype');
+}
+@font-face{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url(/assets/fonts/Montserrat/Montserrat-Medium.ttf) format('truetype');
+}
+@font-face{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/assets/fonts/Montserrat/Montserrat-Bold.ttf) format('truetype');
+}
+.fw300{font-weight: 300;}
+.fw400{font-weight: 400;}
+.fw500{font-weight: 500;}
+.fw700{font-weight: 700;}
+.fw900{font-weight: 900;}
+/* .eng{font-family: 'Montserrat', serif;} */
+.eng{font-family: 'Chakra Petch', sans-serif;}
+/* ---------------폰트 관련 end--------------- */
+
+
+
+/* ---------------color 관련--------------- */
+.bgc-md{background-color: #f76a00;}
+
+.bgc-b1{background-color: #1c1c1c;}
+.bgc-b2{background-color: #2c2c2c;}
+.bgc-b3{background-color: #3b3b3b;}
+.bgc-b4{background-color: #404040;}
+.bgcw{background-color: #FFF;}
+.bgc1{background-color: ;}
+.bgc2{background-color: ;}
+.bgc3{background-color: ;}
+.bgc-g1{background-color: #f7f7f7;}
+.bgc-g2{background-color: #c5c5c5;}
+.bgc-g3{background-color: #7f7f7f;}
+.bgc-g4{background-color: #646464;}
+
+
+
+.txc-md{color: #f76a00;}
+
+.txc-b1{color: #1c1c1c;}
+.txc-b2{color: #2c2c2c;}
+.txc-b3{color: #3b3b3b;}
+.txc-b4{color: #404040;}
+.txcw{color: #FFF;}
+.txc1{color: ;}
+.txc2{color: ;}
+.txc3{color: ;}
+.txc-g1{color: #f7f7f7;}
+.txc-g2{color: #c5c5c5;}
+.txc-g3{color: #7f7f7f;}
+.txc-g4{color: #646464;}
+/* ---------------color 관련 end--------------- */
+
+
+
+/* ---------------padding 관련--------------- */
+.pd50{
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+.pdt50{
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.pdb50{
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+.pd70{
+    padding: 70px 0;
+    box-sizing: border-box;
+}
+.pdt70{
+    padding-top: 70px;
+    box-sizing: border-box;
+}
+.pdb70{
+    padding-bottom: 70px;
+    box-sizing: border-box;
+}
+.pd100{
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+.pdt100{
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+.pdb100{
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+.pd150{
+    padding: 150px 0;
+    box-sizing: border-box;
+}
+.pdt150{
+    padding-top: 150px;
+    box-sizing: border-box;
+}
+.pdb150{
+    padding-bottom: 150px;
+    box-sizing: border-box;
+}
+.pd200{
+    padding: 200px 0;
+    box-sizing: border-box;
+}
+.pdt200{
+    padding-top: 200px;
+    box-sizing: border-box;
+}
+.pdb200{
+    padding-bottom: 200px;
+    box-sizing: border-box;
+}
+@media screen and (max-width:991px){
+    .pd50{padding: 40px 0;}
+    .pdt50{padding-top: 40px;}
+    .pdb50{padding-bottom: 40px;}
+    .pd70{padding: 55px 0;}
+    .pdt70{padding-top: 55px;}
+    .pdb70{padding-bottom: 55px;}
+    .pd100{padding: 70px 0;}
+    .pdt100{padding-top: 70px;}
+    .pdb100{padding-bottom: 70px;}
+    .pd150{padding: 120px 0;}
+    .pdt150{padding-top: 120px;}
+    .pdb150{padding-bottom: 120px;}
+    .pd200{padding: 150px 0;}
+    .pdt200{padding-top: 150px;}
+    .pdb200{padding-bottom: 150px;}
+}
+@media screen and (max-width:600px){
+    .pd50{padding: 30px 0;}
+    .pdt50{padding-top: 30px;}
+    .pdb50{padding-bottom: 30px;}
+    .pd70{padding: 40px 0;}
+    .pdt70{padding-top: 40px;}
+    .pdb70{padding-bottom: 40px;}
+    .pd100{padding: 50px 0;}
+    .pdt100{padding-top: 50px;}
+    .pdb100{padding-bottom: 50px;}
+    .pd150{padding: 70px 0;}
+    .pdt150{padding-top: 70px;}
+    .pdb150{padding-bottom: 70px;}
+    .pd200{padding: 100px 0;}
+    .pdt200{padding-top: 100px;}
+    .pdb200{padding-bottom: 100px;}
+}
+@media screen and (max-width:400px){
+    .pd50{padding: 20px 0;}
+    .pdt50{padding-top: 20px;}
+    .pdb50{padding-bottom: 20px;}
+    .pd70{padding: 30px 0;}
+    .pdt70{padding-top: 30px;}
+    .pdb70{padding-bottom: 30px;}
+    .pd100{padding: 35px 0;}
+    .pdt100{padding-top: 35px;}
+    .pdb100{padding-bottom: 35px;}
+    .pd150{padding: 50px 0;}
+    .pdt150{padding-top: 50px;}
+    .pdb150{padding-bottom: 50px;}
+    .pd200{padding: 70px 0;}
+    .pdt200{padding-top: 70px;}
+    .pdb200{padding-bottom: 70px;}
+}
+.pd0{padding: 0;}
+.pdt0{padding-top: 0;}
+.pdb0{padding-bottom: 0;}
+.pdl0{padding-left: 0;}
+.pdr0{padding-right: 0;}
+
+.pdn{padding: 0 !important;}
+.pdtn{padding-top: 0 !important;}
+.pdbn{padding-bottom: 0 !important;}
+.pdln{padding-left: 0 !important;}
+.pdrn{padding-right: 0 !important;}
+/* ---------------padding 관련 end--------------- */
+
+
+
+/* ---------------br 관련--------------- */
+@media screen and (min-width:991.1px){
+    br.brs{display: none;}
+}
+@media screen and (max-width:991px){
+    br.brl{display: none;}
+}
+/* ---------------br 관련 end--------------- */
+
+
+
+/* ---------------media screen--------------- */
+@media screen and (min-width:991.1px){
+
+}
+/* @media screen and (max-width:1350px){
+    
+}
+@media screen and (max-width:1150px){
+    
+} */
+@media screen and (max-width:1024px){
+    
+}
+@media screen and (max-width:850px){
+    
+}
+@media screen and (max-width:600px){
+
+}
+@media screen and (max-width:400px){
+
+}
+/* ---------------media screen end--------------- */
+
+
+
+/* ---------------그누보드 페이지네이션--------------- */
+.pagination-btns {
+    width: 100%;
+    text-align: center;
+}
+
+.pagination-btns .pg_wrap {
+    clear: unset;
+    float: none;
+    display: inline-block;
+}
+
+.pagination-btns .pg_wrap .pg {
+    display: block;
+    text-align: center;
+}
+
+.pagination-btns .pg_wrap .pg::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.pagination-btns .pg_wrap .pg .sound_only {
+    position: fixed;
+    left: -100000px;
+}
+
+.pagination-btns .pg_wrap .pg .pg_current, .pagination-btns .pg_wrap .pg .pg_page,
+.pagination-btns .pg_wrap .pg .pg_start::after, .pagination-btns .pg_wrap .pg .pg_end::after,
+.pagination-btns .pg_wrap .pg .pg_prev::after, .pagination-btns .pg_wrap .pg .pg_next::after {
+    min-width: unset;
+    padding: unset;
+    float: left;
+    display: block;
+    margin: 0 5px;
+    position: relative;
+    width: 25px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 100%;
+    font-weight: 300;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #c6c6c6;
+    font-size: 16px;
+    font-family: 'Lexend Deca', sans-serif;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-btns .pg_wrap .pg .pg_page:hover {   
+    color: #c99e9f;
+}
+
+.pagination-btns .pg_wrap .pg .pg_start, .pagination-btns .pg_wrap .pg .pg_end,
+.pagination-btns .pg_wrap .pg .pg_prev, .pagination-btns .pg_wrap .pg .pg_next {
+    text-indent: unset;
+    background: none;
+    font-size: 0 !important;
+    border: 0;
+    line-height: 0;
+}
+
+.pagination-btns .pg_wrap .pg .pg_start:hover, .pagination-btns .pg_wrap .pg .pg_end:hover,
+.pagination-btns .pg_wrap .pg .pg_prev:hover, .pagination-btns .pg_wrap .pg .pg_next:hover {
+    background: none;
+    color: unset;
+}
+
+.pagination-btns .pg_wrap .pg .pg_start:hover::after, .pagination-btns .pg_wrap .pg .pg_end:hover::after,
+.pagination-btns .pg_wrap .pg .pg_prev:hover::after, .pagination-btns .pg_wrap .pg .pg_next:hover::after {  
+    color: #c99e9f;
+}
+
+.pagination-btns .pg_wrap .pg .pg_start::after, .pagination-btns .pg_wrap .pg .pg_end::after,
+.pagination-btns .pg_wrap .pg .pg_prev::after, .pagination-btns .pg_wrap .pg .pg_next::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 400;
+    margin: 0;
+}
+
+.pagination-btns .pg_wrap .pg .pg_start::after {
+    content: '\f053';
+}
+
+.pagination-btns .pg_wrap .pg .pg_end::after {
+    content: '\f054';
+}
+
+.pagination-btns .pg_wrap .pg .pg_prev::after {
+    content: '\f053';
+}
+
+.pagination-btns .pg_wrap .pg .pg_next::after {
+    content: '\f054';
+}
+
+.pagination-btns .pg_wrap .pg .pg_current {
+    font-weight: 700;   
+    color: #343434;
+}
+@media screen and (max-width:850px){
+    .pagination-btns .pg_wrap .pg .pg_current, .pagination-btns .pg_wrap .pg .pg_page,
+    .pagination-btns .pg_wrap .pg .pg_start::after, .pagination-btns .pg_wrap .pg .pg_end::after,
+    .pagination-btns .pg_wrap .pg .pg_prev::after, .pagination-btns .pg_wrap .pg .pg_next::after {
+        margin: 0 4px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:400px){
+    .pagination-btns .pg_wrap .pg .pg_current, .pagination-btns .pg_wrap .pg .pg_page,
+    .pagination-btns .pg_wrap .pg .pg_start::after, .pagination-btns .pg_wrap .pg .pg_end::after,
+    .pagination-btns .pg_wrap .pg .pg_prev::after, .pagination-btns .pg_wrap .pg .pg_next::after {
+        margin: 0 3px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 13px;
+    }
+}
+/* ---------------그누보드 페이지네이션 end--------------- */
