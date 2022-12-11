@@ -342,6 +342,10 @@
 .sec-profile .rgt .box ul li .txt{
   line-height: 1.3;
 }
+.sec-profile .rgt .box .txt2{
+  font-size: 15px;
+  line-height: 1.3;
+}
 
 .sec-profile .rgt .bar-list{
   display: flex;
