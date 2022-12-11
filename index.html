@@ -26,7 +26,7 @@
     <header>
         <div class="header-wrap center">
             <h1>
-                <a href="/" class="eng fw700" cursor-class="overlay">
+                <a href="/portfolio/" class="eng fw700" cursor-class="overlay">
                     Kwon Minji
                 </a>
             </h1>
@@ -132,16 +132,16 @@
                             <p class="tit eng"><b>I</b>ntro</p>
 
                             <p class="txt2">
-                                안녕하세요! 웹퍼블리셔 권민지입니다.<br />
+                                안녕하세요! 웹퍼블리셔 권민지입니다.😃<br />
                                 <br />
-                                머리속에서 생각한 화면을
-                                그대로 코딩으로 구현하는 것을 목표로 하고 있습니다.<br />
+                                저는 어떠한 형태든 머리속에서 생각한 화면을
+                                그대로 코딩으로 구현하는 것을 늘 목표로 하고 있습니다.<br />
                                 <br />
                                 웹접근성을 고려하여 HTML5, CSS3 시멘틱 마크업으로 코딩하고 디자인하며 
                                 Javascript, jQuery로 디자인에 생기를 불어넣는 과정에 흥미를 느낍니다.<br />
                                 <br />
                                 앞으로도 끊임없이 기술을 연구하고 공부하여<br />
-                                깔끔하고 가독성있는 페이지를 구현하기위해 노력할 것입니다.
+                                깔끔하고 가독성있는 페이지를 구현하기위해 노력을 다할 것입니다.
                             </p>
                             <!-- <ul>
                                 <li>
@@ -253,10 +253,19 @@
                                                 </p>
                                             </li>
                                             <li>
-                                                <p class="tit fw700">참여도</p>
-                                                <p class="txt">
-                                                    퍼블리싱 90%
-                                                </p>
+                                                <p class="tit fw700">참여도</p>                                                   
+                                                <dl>
+                                                    <dt>퍼블리싱 90%</dt>
+                                                    <dd>
+                                                        - swiper 라이브러리를 이용한 풀페이지에서 일반스크롤로 전환되는 메인페이지 작업
+                                                    </dd>
+                                                    <dd>
+                                                        - 그누보드5 스킨을 이용하여 게시판 list, write, view 페이지 생성
+                                                    </dd>
+                                                    <dd>
+                                                        - 화려한 애니메이션 구현에 신경 쓴 프로젝트
+                                                    </dd>
+                                                </dl>                                            
                                             </li>
                                         </ul>
 
@@ -293,9 +302,12 @@
                                             </li>
                                             <li>
                                                 <p class="tit fw700">참여도</p>
-                                                <p class="txt">
-                                                    퍼블리싱 100%
-                                                </p>
+                                                <dl>
+                                                    <dt>퍼블리싱 100%</dt>
+                                                    <dd>
+                                                        - 메인, header, footer 외 전체페이지 퍼블리싱
+                                                    </dd>
+                                                </dl> 
                                             </li>
                                         </ul>
 
@@ -332,9 +344,15 @@
                                             </li>
                                             <li>
                                                 <p class="tit fw700">참여도</p>
-                                                <p class="txt">
-                                                    퍼블리싱 100%
-                                                </p>
+                                                <dl>
+                                                    <dt>퍼블리싱 100%</dt>
+                                                    <dd>
+                                                        - 메인, header, footer 외 전체페이지 퍼블리싱
+                                                    </dd>
+                                                    <dd>
+                                                        - 상품소개 페이지의 배경 변경 등 스크롤 애니메이션에 신경을 많이 쓴 작업
+                                                    </dd>
+                                                </dl> 
                                             </li>
                                         </ul>
 
@@ -410,9 +428,15 @@
                                             </li>
                                             <li>
                                                 <p class="tit fw700">참여도</p>
-                                                <p class="txt">
-                                                    퍼블리싱 80%
-                                                </p>
+                                                <dl>
+                                                    <dt>퍼블리싱 85%</dt>
+                                                    <dd>
+                                                        - 메인, header, footer 외 전체페이지 퍼블리싱 및 서브페이지 일부 작업
+                                                    </dd>
+                                                    <dd>
+                                                        - header pc, 모바일 반응형 메뉴 원소스로 퍼블리싱
+                                                    </dd>
+                                                </dl> 
                                             </li>
                                         </ul>
 
@@ -518,7 +542,7 @@
                 crossFade:true
             },
             autoplay: {
-                delay: 3000,
+                delay: 4000,
                 disableOnInteraction: false,
             },
             speed: 500,
@@ -541,21 +565,7 @@
                     }else{
                         $page.text(realIdx);
                     }
-                },
-                // init: function () {
-                //     $(".swiper-progress-bar").removeClass("animate");
-                //     $(".swiper-progress-bar").removeClass("active");
-                //     $(".swiper-progress-bar").eq(0).addClass("animate");
-                //     $(".swiper-progress-bar").eq(0).addClass("active");
-                // },
-                // slideChangeTransitionStart: function () {
-                //     $(".swiper-progress-bar").removeClass("animate");
-                //     $(".swiper-progress-bar").removeClass("active");
-                //     $(".swiper-progress-bar").eq(0).addClass("active");
-                // },
-                // slideChangeTransitionEnd: function () {
-                //     $(".swiper-progress-bar").eq(0).addClass("animate");
-                // }
+                },               
             },
         });
 
